@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="style.css" />
+	<script defer src="script.js"></script>
+	<title>Pokemon Battle</title>
+</head>
+
+<body>
+	<div class="startScreen" id="startScreen">
+		<h1>POKE<span>MON</span></h1>
+		<img src="Images/images.png" alt="Pokeball">
+		<br>
+		<button>One Player</button>
+		<button>Two Player</button>
+			<p>
+				Instructions: <br>
+				Press your game mode then choose your pokemon. <br>
+				Once in the game your health bar is displayed beside your characterin the HP bar and your ultimate energy is stored in the UP bar. <br>
+				You can only use your ultimate (3rd attack) once the UP bar is full. <br>
+				You can only heal 3 times per game. <br>
+				The two first powers do almost equal damage but your secondary power does more damage the lower health you have. <br>
+				Different Pokemon can deal higher or lower damage to others based on their element.<br>
+				To reset the game refresh the page.<br>
+			</p>
+		</div>
+	</div>
+	<div class="choosePokemonContainer" id="choosePokemonContainer">
+		<div class="choosePokemon">
+			<h2 id='playerchoose'>Player One: Choose your character!</h2>
+		</div>
+		<div id="Pokemon">
+			<table>
+				<tr>
+					<td><button><img src="Images/Bulbasaur.png" alt="Bulbasaur"></button></td>
+					<td><button><img src="Images/Charmander.png" alt="Charmander"></button></td>
+				</tr>
+				<tr>
+					<td><button><img src="Images/Eevee.png" alt="Eevee"></button></td>
+					<td><button><img src="Images/Gengar.png" alt="Gengar"></button></td>
+				</tr>
+				<tr>
+					<td><button><img src="Images/Magikarp.png" alt="Magikarp"></button></td>
+					<td><button><img src="Images/Nidorino.png" alt="Nidorino"></button></td>
+				</tr>
+				<tr>
+					<td><button><img src="Images/Pikachu.png" alt="Pikachu"></button></td>
+					<td><button><img src="Images/Squirtle.png" alt="Squirtle"></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="game-container" id="game-container">
+		<div class="battle-row opponent">
+			<div class="info-block left">
+				<div class="name" id="opponentName">NIDORINO</div>
+				<div class="hp-container">
+					<span>HP:</span><span id="opponent-hp"></span><span id="opponentFullHP">/61</span>
+					<br>
+					<img src="Images/bars/FullHealth.png" alt="" class="healthBar">
+					<br>
+					<img src="Images/bars/NoUP.png" alt="" class="upBar">
+				</div>
+			</div>
+			<div class="spriteContainer">
+				<img class="sprite" id="spriteOne"
+					src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/33.png" />
+			</div>
+		</div>
+		<div class="battle-row player">
+			<div class="info-block right">
+				<div class="name" id="playerName">GENGAR</div>
+				<div class="hp-container">
+					<span>HP:</span><span id="player-hp"></span><span id="playerFullHP">/60</span>
+					<br>
+					<img src="Images/bars/FullHealth.png" alt="" class="healthBar">
+					<br>
+					<img src="Images/bars/NoUP.png" alt="" class="upBar">
+				</div>
+			</div>
+			<div class="spriteContainer">
+				<img class="sprite" id="spriteTwo"
+					src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/94.png" />
+			</div>
+
+		</div>
+		<div class="bottom-box-border">
+			<div class="bottom-box">
+				<div id="message">What will GENGAR do?</div>
+				<div class="menu" id="menu">
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+					<button></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

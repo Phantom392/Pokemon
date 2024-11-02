@@ -1,0 +1,253 @@
+html,
+body {
+	background-color: rgb(235, 235, 235);
+	padding: 0;
+	margin: 0;
+}
+
+.battle-row {
+	display: flex;
+}
+
+.player {
+	flex-direction: row-reverse;
+}
+
+.game-container {
+	display: flex;
+	flex-direction: column;
+	width: fit-content;
+	width: 50%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: "Courier New", Courier, monospace;
+}
+
+.name {
+	font-size: larger;
+	text-transform: uppercase;
+}
+
+.spriteContainer {
+	width: 350px;
+	height: 350px;
+	margin: -40px;
+}
+
+.sprite {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+}
+
+#spriteOne {
+	transform: translate(250px, 40px);
+}
+
+#spriteTwo {
+	transform: translate(80px, 0);
+}
+
+.battle-row.player {
+	align-items: flex-end;
+	justify-content: space-between;
+}
+
+.info-block {
+	width: 300px;
+	font-size: large;
+}
+
+.info-block.right {
+	margin-left: 40px;
+}
+
+.info-block.left {
+	margin-right: 40px;
+}
+
+.hp-container {
+	border-bottom: 3px solid black;
+	border-radius: 2px;
+	padding-left: 6px;
+	padding-right: 6px;
+	font-size: large;
+	font-weight: bolder;
+}
+
+.right .hp-container {
+	border-right: 3px solid black;
+	margin-right: 10px;
+	text-align: right;
+}
+
+.left .hp-container {
+	border-left: 3px solid black;
+	margin-left: 10px;
+}
+
+#playerName{
+	text-align: right;
+}
+
+.upBar, .healthBar{
+	width: 150px;
+}
+
+.bottom-box-border {
+	margin-top: 10px;
+	height: 100px;
+	width: 100%;
+
+	position: relative;
+
+
+}
+
+.bottom-box {
+	height: 140px;
+	width: 100%;
+	font-size: larger;
+	background-color: white;
+	position: absolute;
+	display: flex;
+	border: 3px solid black;
+	padding: 2px;
+	box-sizing: border-box;
+
+}
+
+#message {
+	width: 45%;
+	padding: 5px;
+}
+
+.menu {
+	flex: 1;
+	display: grid;
+	grid-template-columns: 28% 22% 30% 20%;
+	grid-template-rows: 100%;
+	border-left: 1px solid black;
+}
+
+.menu button {
+	border-left: 1px solid black;
+	text-align: center;
+	font-size: medium;
+}
+
+.menu button:hover {
+	color: rgb(201, 0, 0);
+}
+
+.menu button:active {
+	color: rgb(91, 0, 133);
+}
+
+button {
+	border: none;
+	text-align: left;
+	padding-left: 6px;
+	font-family: "Courier New", Courier, monospace;
+	background-color: white;
+}
+
+button:active {
+	color: rgb(170, 170, 170);
+}
+
+/*Start Screen*/
+.startScreen {
+	font-family: "Courier New", Courier, monospace;
+	text-align: center;
+	width: 50%;
+	display: grid;
+	place-items: center;
+	border: 3px solid black;
+	border-top: none;
+	padding-bottom: 3.10rem;
+	margin: 0 25%;
+}
+
+.startScreen img {
+	padding: 1rem;
+}
+
+.startScreen h1 {
+	font-size: 7rem;
+	color: rgb(157, 0, 0);
+	margin-bottom: 0;
+}
+
+.startScreen span {
+	color: rgb(104, 104, 104);
+}
+
+.startScreen button {
+	font-size: 2rem;
+	padding: 1rem;
+	background-color: rgb(224, 224, 224);
+	border: 2px solid rgb(34, 34, 34);
+	border-radius: 5px;
+	margin: 1rem;
+}
+
+.startScreen button:hover {
+	transform: translate(1px, -1px);
+	background-color: rgb(242, 242, 242);
+	color: rgb(90, 0, 0);
+}
+
+.startScreen button:active {
+	transform: translate(-1px, 1px);
+}
+
+/*Choosing Pokemon Screen*/
+
+.choosePokemonContainer {
+	text-align: center;
+}
+
+.choosePokemonContainer button:hover {
+	background-color: rgb(244, 244, 244);
+	transform: translate(1px, -1px);
+}
+
+.choosePokemonContainer button:active {
+	transform: translate(-1px, 1px);
+}
+
+.choosePokemonContainer h2 {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 2rem;
+	color: rgb(91, 91, 91);
+	padding: 3rem;
+}
+
+.choosePokemonContainer table {
+	width: 100%;
+}
+
+.choosePokemonContainer tr td:first-child button {
+	float: right;
+}
+
+.choosePokemonContainer tr td:last-child button {
+	float: left;
+}
+
+.choosePokemonContainer button {
+	background-color: rgb(235, 235, 235);
+	border: 3px solid black;
+	border-radius: 5px;
+}
+
+.choosePokemonContainer button img {
+	width: 12rem;
+	padding: 1rem;
+}
+
+.sprite img {
+	width: 50px;
+}

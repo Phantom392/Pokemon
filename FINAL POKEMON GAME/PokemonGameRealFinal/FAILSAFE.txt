@@ -1,0 +1,97 @@
+function changeTurn(toPokemon) {
+    if (toPokemon == "toNidorino") {
+        attacks[0].innerHTML = "Fury";
+        attacks[1].innerHTML = "Kick";
+        attacks[2].innerHTML = "Toxic Spikes";
+        attacks[3].innerHTML = "Heal";
+        document.getElementById("message").innerHTML = "What will NIDORINO do?";
+        document.getElementById("menu").style.gridTemplateColumns = "23% 23% 34% 20%";
+    } else if (toPokemon == "toGengar") {
+        attacks[0].innerHTML = "Tackle";
+        attacks[1].innerHTML = "Claw";
+        attacks[2].innerHTML = "Shadow Bomb";
+        attacks[3].innerHTML = "Heal";
+        document.getElementById("message").innerHTML = "What will GENGAR do?";
+        document.getElementById("menu").style.gridTemplateColumns = "28% 22% 30% 20%";
+    }
+    playerTurn = !playerTurn;
+    checkHealth();
+    removeEventListeners();
+    intailEventListeners();
+}
+
+
+ATTACKS 
+
+//function gengarMove(move) {
+//    //TACKLE
+//    if (move == "Tackle") {
+//        animateGengar("tackle")
+//        nidorinoHP -= 5;
+//        checkHealth();
+//        //CLAW
+//    } else if (move == "Claw") {
+//        animateGengar("claw");
+//        if (gengarHP >= 30) {
+//            nidorinoHP -= Math.floor((Math.random() * 2) + 1);
+//        } else if (gengarHP < 30) {
+//            nidorinoHP -= Math.floor((Math.random() * 5) + 4);
+//        }
+//        checkHealth();
+//        //ULTI
+//    } else if (move == "Shadow Bomb" && gengarUltiPP >= 100) {
+//        animateGengar("shadowBomb");
+//        nidorinoHP -= Math.floor((Math.random() * 7) + 6);
+//        gengarUltiPP = 0;
+//        checkHealth();
+//    } else if (move == "Shadow Bomb" && gengarUltiPP < 100) {
+//        document.getElementById("message").innerHTML = "You don't have enough energy.";
+//        gengarMove(move);
+//        return;
+//        //HEAL
+//    } else if (move == "Heal") {
+//        animateGengar("heal");
+//        gengarHP += Math.floor((Math.random() * 7) + 3);
+//        checkHealth();
+//    }
+//    gengarUltiPP += Math.floor((Math.random() * 10) + 20);
+//    document.getElementById("message").innerHTML = "GENGAR used " + move + "!";
+//    setTimeout(function () {
+//        changeTurn("toNidorino");
+//    }, 2000);
+//}
+//
+//function nidorinoMove(move) {
+//    if (move == "Fury") {
+//        animateNidorino("fury")
+//        gengarHP -= 5;
+//        checkHealth();
+//    } else if (move == "Kick") {
+//        animateNidorino("kick");
+//        if (nidorinoHP >= 30) {
+//            gengarHP -= Math.floor((Math.random() * 3) + 3);
+//        } else if (nidorinoHP < 30) {
+//            gengarHP -= Math.floor((Math.random() * 7) + 4);
+//        }
+//        checkHealth();
+//    } else if (move == "Toxic Spikes" && nidorinoUltiPP >= 100) {
+//        animateNidorino("toxicSpikes");
+//        gengarHP -= Math.floor((Math.random() * 10) + 5);
+//        nidorinoUltiPP = 0;
+//        checkHealth();
+//    } else if (move == "Toxic Spikes" && nidorinoUltiPP < 100) {
+//        document.getElementById("message").innerHTML = "You don't have enough energy.";
+//        nidorinoMove(move);
+//        return;
+//    } else if (move == "Heal") {
+//        animateNidorino("heal");
+//        nidorinoHP += Math.floor((Math.random() * 7) + 3);
+//        checkHealth();
+//    }
+//    nidorinoUltiPP += Math.floor((Math.random() * 10) + 20);
+//    document.getElementById("message").innerHTML = "NIDORINO used " + move + "!";
+//    setTimeout(function () {
+//        changeTurn("toGengar");
+//    }, 2000);
+//
+//}
